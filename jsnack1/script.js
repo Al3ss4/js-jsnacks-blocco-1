@@ -5,9 +5,22 @@ console.log('JS OK!')
 
 // creazione array invitati
 
-const listaInvitati = ['Luca', 'Giovanni', 'Paolo', 'Michele', 'Luigi', 'Mario', 'Alessandro', 'Francesco', 'Ivan', 'Mattia'];
+var listaInvitati = ['luca', 'giovanni', 'paolo', 'michele', 'luigi', 'mario', 'alessandro', 'francesco', 'ivan', 'mattia'];
 
-// richiesta nome partecipante 
-const nomePartecipante = prompt('Qual è il tuo nome?');
+ // richiesta nome partecipante 
+var nomePartecipante = prompt('Qual è il suo nome?').toLocaleLowerCase();
 
-console.log(nomePartecipante);
+
+// comunicazione all'invitato
+var comunicazione = 'L\'invitato' + ' ' + nomePartecipante + ' ' + 'non è presente nella lista';
+
+// controlla che sia nella lista di chi può accedere
+
+for(var i = 0; i < listaInvitati.length; i++){
+    if (nomePartecipante == listaInvitati[i]){
+// stampa messaggio di benvenuto 
+        comunicazione = 'L\'invitato' + ' ' + nomePartecipante + ' ' + 'è presente nella lista';
+    }
+}
+
+console.log(comunicazione);
