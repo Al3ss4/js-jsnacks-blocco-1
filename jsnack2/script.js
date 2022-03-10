@@ -10,7 +10,7 @@ array=[]
 
 for(var i=0 ; i<6 ; i++){
     numero= parseInt(prompt('inserisci un numero'));
-    console.log(numero);
+    // console.log(numero);
 
 //se è dispari inseriscilo nell’array
     if( numero % 2 ==! 0){
