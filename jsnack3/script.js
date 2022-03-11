@@ -15,3 +15,19 @@ while (numero) {
 }
 
 console.log(somma);
+
+
+//correzione
+
+
+let numeroUtente;
+while(isNaN(parseInt(numeroUtente)) || numeroUtente.length !== 4 ){
+    numeroUtente = prompt('Inserisci numero di 4 cifre');
+}
+
+let sommaCifre = 0;
+for(let i=0; i < numeroUtente.length; i++){
+    sommaCifre += parseInt(numeroUtente[i]);
+}
+
+console.log(` La somma delle cifre del numero ${numeroUtente} è: ${sommaCifre}`);

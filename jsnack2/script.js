@@ -19,3 +19,20 @@ for(var i=0 ; i<6 ; i++){
 }
 
 console.log(array);
+
+
+//correzione
+
+const arrayNumeri = [];
+
+for( let i=0; i < 6; i++){
+    let nuovoNumero;
+    while(isNaN(nuovoNumero)){
+        nuovoNumero = parseInt(prompt(`${i+1} Inserisci un nuovo numero`))
+    }
+    if(nuovoNumero % 2 !==0){
+        arrayNumeri.push(nuovoNumero)
+    }
+}
+
+console.log('I numeri dispari che hai inserito sono:' + arrayNumeri);
